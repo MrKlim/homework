@@ -6,18 +6,16 @@
 
 from math import pi
 def perimeter(diameter):
-    d = pi * d
-    if d > 0:
-        return d
+    diameter = pi * diameter
+    if diameter > 0:
+        return diameter
     else:
         print('Нужна сковородка побольше')
 
 
 def square(diameter):
-    t = pi * (d / 2) ** 2
-    if d > 0:
+    t = pi * (diameter / 2) ** 2
+    if diameter > 0:
         return t
     else:
         print('Нужна сковородка побольше')
-
-
