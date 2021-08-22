@@ -17,9 +17,9 @@ def find_entrance(f, n):
     f - число этажей в доме
     n - номер квартиры
     """
-    k = f * 4
+    k = f * 4  # количество квартир в подъезде
     entrance = ((-n) // k) * (-1)
-    return 0
+    return entrance
 
 
 def find_floor(f, n):
@@ -27,12 +27,14 @@ def find_floor(f, n):
     f - число этажей в доме
     n - номер квартиры
     """
+    k = f * 4
     if n < k:
         floor = ((-n) // 4) * (-1)
+    if n > k:
+        floor = ((n - k) * (-1) // 4) * (-1)
     else:
-        g = n % k
-        floor = (g * (-1) // 4) * (-1)
-    return 0
+        floor = (n * (-1) // 4) * (-1)
+    return floor
 
 
 if __name__ == "__main__":
